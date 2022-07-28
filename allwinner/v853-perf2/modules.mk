@@ -13,10 +13,10 @@ define KernelPackage/vin-v4l2
   FILES+=$(LINUX_DIR)/drivers/media/v4l2-core/videobuf2-memops.ko
   FILES+=$(LINUX_DIR)/drivers/media/v4l2-core/videobuf2-v4l2.ko
   FILES+=$(LINUX_DIR)/drivers/media/platform/sunxi-vin/vin_io.ko
-  FILES+=$(LINUX_DIR)/drivers/media/platform/sunxi-vin/modules/sensor/imx386_mipi.ko
+  FILES+=$(LINUX_DIR)/drivers/media/platform/sunxi-vin/modules/sensor/gc2053_mipi.ko
 #  FILES+=$(LINUX_DIR)/drivers/media/platform/sunxi-vin/modules/sensor_power/sensor_power.ko
   FILES+=$(LINUX_DIR)/drivers/media/platform/sunxi-vin/vin_v4l2.ko
-  AUTOLOAD:=$(call AutoProbe,videobuf2-core videobuf2-dma-contig videobuf2-memops videobuf2-v4l2 vin_io imx386_mipi vin_v4l2)
+  AUTOLOAD:=$(call AutoProbe,videobuf2-core videobuf2-dma-contig videobuf2-memops videobuf2-v4l2 vin_io gc2053_mipi vin_v4l2)
 endef
 
 define KernelPackage/vin-v4l2/description

@@ -16,4 +16,6 @@ TARGET_ARCH_PACKAGES := sunxi
 
 TARGET_BOARD_PLATFORM := v853s
 
+BT_UART_INDEX := UART2
+
 endif #__target/allwinner/v853s-common/BoardConfigCommon.mk_inc

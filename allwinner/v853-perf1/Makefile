@@ -22,7 +22,7 @@ KERNELNAME:=zImage dtbs
 include $(BUILD_DIR)/target.mk
 
 DEFAULT_PACKAGES +=
-TARGET_CFLAGS += -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DUSE_LOG_LIB_GLOG
+TARGET_CFLAGS += -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DUSE_LOG_LIB_GLOG -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unused-function -Wno-unused-label -Wno-unused-const-variable -Wno-comment
 #-DUSE_STD_LOG
 TARGET_CXXFLAGS += -std=c++11 -fno-rtti
 

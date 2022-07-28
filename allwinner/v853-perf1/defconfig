@@ -4,10 +4,11 @@
 #
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
-# CONFIG_TARGET_r853s_perf2 is not set
-# CONFIG_TARGET_v851_perf1 is not set
+# CONFIG_TARGET_v851s_perf1 is not set
+# CONFIG_TARGET_v851se_perf1 is not set
 CONFIG_TARGET_v853_perf1=y
 # CONFIG_TARGET_v853_perf2 is not set
+# CONFIG_TARGET_v853_vision is not set
 # CONFIG_TARGET_v853s_perf1 is not set
 # CONFIG_TARGET_v853s_perf2 is not set
 CONFIG_TARGET_v853_perf1_=y
@@ -80,7 +81,7 @@ CONFIG_SUNXI_RECOVERY_INITRAMFS_KERNEL_FORMAT_UIMAGE=y
 # CONFIG_SUNXI_SEPARATE_DATA_FROM_ROOTFS is not set
 # CONFIG_CUSTOMIZE_IMAGE_NAME is not set
 # CONFIG_CUSTOMIZE_CONFIG_FILE is not set
-# CONFIG_SUPPORT_PACK_OUT_OF_TINA is not set
+CONFIG_SUPPORT_PACK_OUT_OF_TINA=y
 CONFIG_TARGET_ROOTFS_INCLUDE_UIMAGE=y
 CONFIG_TARGET_ROOTFS_INCLUDE_ZIMAGE=y
 CONFIG_TARGET_ROOTFS_INCLUDE_FIT=y
@@ -2254,16 +2255,18 @@ CONFIG_PACKAGE_eyesee-mpp-external=y
 CONFIG_PACKAGE_eyesee-mpp-framework=y
 # CONFIG_mpp_framework_videoresizer is not set
 CONFIG_PACKAGE_eyesee-mpp-middleware=y
+# CONFIG_mpp_support_fastboot is not set
 CONFIG_select_sensor=y
 # CONFIG_imx386 is not set
 # CONFIG_gc4663 is not set
 CONFIG_gc2053=y
+# CONFIG_sc4336 is not set
 CONFIG_mpp_fwrite_method_vfs=y
 # CONFIG_mpp_fwrite_method_directIO is not set
 CONFIG_mpp_hw_display=y
 CONFIG_mpp_vi=y
 CONFIG_mpp_vo=y
-# CONFIG_mpp_textenc is not set
+CONFIG_mpp_textenc=y
 CONFIG_mpp_venc=y
 CONFIG_mpp_vdec=y
 CONFIG_mpp_aio=y
@@ -2280,7 +2283,6 @@ CONFIG_mpp_gps_pack_in_mdat=y
 CONFIG_mpp_demuxer=y
 # CONFIG_mpp_adas_detect is not set
 # CONFIG_mpp_adas_detect_v2 is not set
-# CONFIG_mpp_body_detect is not set
 CONFIG_mpp_aec=y
 CONFIG_mpp_softdrc=y
 # CONFIG_mpp_agc is not set
@@ -2322,11 +2324,14 @@ CONFIG_mpp_sample=y
 # CONFIG_mpp_sample_MotionDetect is not set
 # CONFIG_mpp_sample_motor is not set
 # CONFIG_mpp_sample_multi_vi2venc2muxer is not set
+# CONFIG_mpp_sample_odet_demo is not set
 # CONFIG_mpp_sample_OnlineVenc is not set
+# CONFIG_mpp_sample_PersonDetect is not set
 # CONFIG_mpp_sample_pthread_cancel is not set
 # CONFIG_mpp_sample_recorder is not set
 # CONFIG_mpp_sample_region is not set
-# CONFIG_mpp_sample_region_detect is not set
+# CONFIG_mpp_sample_RegionDetect is not set
+# CONFIG_mpp_sample_smartPreview_demo is not set
 # CONFIG_mpp_sample_select is not set
 # CONFIG_mpp_sample_takePicture is not set
 # CONFIG_mpp_sample_timelapse is not set
@@ -2348,8 +2353,6 @@ CONFIG_mpp_sample=y
 # CONFIG_mpp_sample_virvi2vo is not set
 # CONFIG_mpp_sample_virvi2vo_zoom is not set
 # CONFIG_mpp_sample_vo is not set
-# CONFIG_mpp_sample_odet_demo is not set
-# CONFIG_mpp_sample_airoi is not set
 # CONFIG_PACKAGE_eyesee-mpp-private-onvif is not set
 # CONFIG_PACKAGE_eyesee-mpp-private-rtsp is not set
 CONFIG_PACKAGE_eyesee-mpp-system=y
@@ -2423,6 +2426,7 @@ CONFIG_PACKAGE_alsa-conf-aw=y
 # CONFIG_PACKAGE_esp_c_support is not set
 # CONFIG_ESP32_ENABLE_TEST is not set
 # CONFIG_PACKAGE_eyesee-minigui is not set
+# CONFIG_PACKAGE_facehumandemo is not set
 # CONFIG_PACKAGE_fsck_msdos is not set
 # CONFIG_PACKAGE_healthd is not set
 # CONFIG_PACKAGE_lenet is not set
@@ -2660,7 +2664,7 @@ CONFIG_SWUPDATE_CONFIG_AWBOOT_HANDLER=y
 # CONFIG_PACKAGE_uevent-monitor is not set
 # CONFIG_PACKAGE_usb-gadget is not set
 # CONFIG_PACKAGE_uvcout is not set
-# CONFIG_PACKAGE_viplite-driver is not set
+CONFIG_PACKAGE_viplite-driver=y
 # CONFIG_PACKAGE_wifimanager is not set
 # CONFIG_PACKAGE_yolov3 is not set
 
@@ -2709,6 +2713,7 @@ CONFIG_SWUPDATE_CONFIG_AWBOOT_HANDLER=y
 # CONFIG_PACKAGE_rtl8733bs-firmware is not set
 # CONFIG_PACKAGE_rtl8821cs-firmware is not set
 # CONFIG_PACKAGE_ssv6155-firmware is not set
+# CONFIG_PACKAGE_ssv6158-firmware is not set
 # CONFIG_PACKAGE_uwe5622-firmware is not set
 # CONFIG_PACKAGE_xr819-firmware is not set
 # CONFIG_PACKAGE_xr819a-firmware is not set
@@ -3667,7 +3672,7 @@ CONFIG_ALSA_LIB_EXTRA_seq=y
 # CONFIG_ALSA_LIB_EXTRA_ucm is not set
 # CONFIG_ALSA_LIB_EXTRA_topology is not set
 # CONFIG_ALSA_LIB_EXTRA_alisp is not set
-# CONFIG_PACKAGE_alsa-plugins is not set
+CONFIG_PACKAGE_alsa-plugins=y
 # CONFIG_PACKAGE_argp-standalone is not set
 CONFIG_PACKAGE_bluez-libs=y
 # CONFIG_PACKAGE_boost is not set
@@ -3805,7 +3810,7 @@ CONFIG_PACKAGE_libreadline=y
 # CONFIG_PACKAGE_librsync is not set
 # CONFIG_PACKAGE_librtlsdr is not set
 # CONFIG_PACKAGE_libruby is not set
-# CONFIG_PACKAGE_libsamplerate is not set
+CONFIG_PACKAGE_libsamplerate=y
 # CONFIG_PACKAGE_libsasl2 is not set
 # CONFIG_PACKAGE_libscenemanager is not set
 # CONFIG_PACKAGE_libseccomp is not set
@@ -3822,7 +3827,7 @@ CONFIG_PACKAGE_libsndfile=y
 # CONFIG_PACKAGE_libsodium is not set
 # CONFIG_PACKAGE_libsoxr is not set
 # CONFIG_PACKAGE_libspeex is not set
-# CONFIG_PACKAGE_libspeexdsp is not set
+CONFIG_PACKAGE_libspeexdsp=y
 # CONFIG_PACKAGE_libssh is not set
 # CONFIG_PACKAGE_libtalloc is not set
 # CONFIG_PACKAGE_libtasn1 is not set
@@ -4441,6 +4446,7 @@ CONFIG_PACKAGE_iw=y
 # CONFIG_PACKAGE_mosquitto-client-nossl is not set
 # CONFIG_PACKAGE_mosquitto-nossl is not set
 # CONFIG_PACKAGE_mrd6 is not set
+# CONFIG_PACKAGE_mtr is not set
 # CONFIG_PACKAGE_ndppd is not set
 # CONFIG_PACKAGE_netperf is not set
 # CONFIG_PACKAGE_nghttp-tools is not set
@@ -4814,6 +4820,7 @@ CONFIG_STRACE_NONE=y
 # CONFIG_PACKAGE_sysstat is not set
 CONFIG_PACKAGE_tinyalsa-utils=y
 # CONFIG_PACKAGE_uart_led is not set
+# CONFIG_PACKAGE_uart_test is not set
 CONFIG_PACKAGE_uboot-envtools=y
 # CONFIG_PACKAGE_ugps is not set
 # CONFIG_PACKAGE_usb-modeswitch is not set

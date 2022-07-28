@@ -41,3 +41,18 @@ if [ -d ${LICHEE_PACK_OUT_DIR}/../staging_dir/target/usr/lib/eyesee-mpp ]; then
 	cp -rf  ${LICHEE_PACK_OUT_DIR}/../staging_dir/target/usr/lib/eyesee-mpp $1/lib_aw/lib
 	cp -rf  ${LICHEE_PACK_OUT_DIR}/../staging_dir/target/usr/include/eyesee-mpp  $1/lib_aw/include
 fi
+
+#cp person detect lib and include
+if [ -d ${LICHEE_PACK_OUT_DIR}/../compile_dir/target/viplite-driver ]; then
+	mkdir -p $1/lib_aw/lib/eyesee-mpp
+	mkdir -p $1/lib_aw/include/eyesee-mpp/viplite
+	cp -rf  ${LICHEE_PACK_OUT_DIR}/../compile_dir/target/viplite-driver/sdk_release/*.a $1/lib_aw/lib/eyesee-mpp
+	cp -rf  ${LICHEE_PACK_OUT_DIR}/../compile_dir/target/viplite-driver/algo_aw/*.a $1/lib_aw/lib/eyesee-mpp
+	cp -rf  ${LICHEE_PACK_OUT_DIR}/../compile_dir/target/viplite-driver/sdk_release/sdk/*.h $1/lib_aw/include/eyesee-mpp/viplite/
+	cp -rf  ${LICHEE_PACK_OUT_DIR}/../compile_dir/target/viplite-driver/algo_aw/*.h $1/lib_aw/include/eyesee-mpp/viplite/
+	cp -rf  ${LICHEE_PACK_OUT_DIR}/../compile_dir/target/viplite-driver/algo_aw/fdet/*.nb $1/other
+	cp -rf  ${LICHEE_PACK_OUT_DIR}/../compile_dir/target/viplite-driver/algo_aw/pdet/*.nb $1/other
+fi
+
+
+
