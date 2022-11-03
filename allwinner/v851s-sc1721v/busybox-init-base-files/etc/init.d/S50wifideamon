@@ -5,9 +5,9 @@
 
 start() {
       printf "Starting wifi_deamon....: "
-	  #wifi_deamon
-	  #sleep 2
-	  #wifi -o sta
+	  wifi_daemon
+	  sleep 2
+	  wifi -o sta
 }
 
 stop() {

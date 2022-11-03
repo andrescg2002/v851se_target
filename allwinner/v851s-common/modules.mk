@@ -193,3 +193,16 @@ define KernelPackage/net-xr829/description
 endef
 
 $(eval $(call KernelPackage,net-xr829))
+
+define KernelPackage/net-xr806
+  SUBMENU:=$(WIRELESS_MENU)
+  TITLE:=xr806 support (staging)
+  FILES:=$(LINUX_DIR)/drivers/net/wireless/xr806/xr806.ko
+  AUTOLOAD:=$(call AutoProbe, xr806)
+endef
+
+define KernelPackage/net-xr806/description
+ Kernel modules for xr806 support
+endef
+
+$(eval $(call KernelPackage,net-xr806))
