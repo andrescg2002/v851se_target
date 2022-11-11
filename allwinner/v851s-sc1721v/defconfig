@@ -1447,7 +1447,8 @@ CONFIG_BUSYBOX_CONFIG_FEATURE_DD_SIGNAL_HANDLING=y
 # CONFIG_BUSYBOX_CONFIG_FEATURE_DD_THIRD_STATUS_LINE is not set
 CONFIG_BUSYBOX_CONFIG_FEATURE_DD_IBS_OBS=y
 # CONFIG_BUSYBOX_CONFIG_FEATURE_DD_STATUS is not set
-# CONFIG_BUSYBOX_CONFIG_DF is not set
+CONFIG_BUSYBOX_CONFIG_DF=y
+# CONFIG_BUSYBOX_CONFIG_FEATURE_DF_FANCY is not set
 CONFIG_BUSYBOX_CONFIG_DIRNAME=y
 # CONFIG_BUSYBOX_CONFIG_DOS2UNIX is not set
 # CONFIG_BUSYBOX_CONFIG_UNIX2DOS is not set
@@ -2280,7 +2281,7 @@ CONFIG_mpp_gps_pack_in_mdat=y
 CONFIG_mpp_demuxer=y
 # CONFIG_mpp_adas_detect is not set
 # CONFIG_mpp_adas_detect_v2 is not set
-CONFIG_mpp_aec=y
+# CONFIG_mpp_aec is not set
 CONFIG_mpp_softdrc=y
 # CONFIG_mpp_agc is not set
 CONFIG_mpp_ai_agc=y
@@ -2297,11 +2298,11 @@ CONFIG_mpp_sample=y
 # CONFIG_mpp_sample_adec2ao is not set
 # CONFIG_mpp_sample_aec is not set
 # CONFIG_mpp_sample_aenc is not set
-# CONFIG_mpp_sample_ai is not set
+CONFIG_mpp_sample_ai=y
 # CONFIG_mpp_sample_ai2aenc is not set
 # CONFIG_mpp_sample_ai2ao is not set
 # CONFIG_mpp_sample_ai2aenc2muxer is not set
-# CONFIG_mpp_sample_ao is not set
+CONFIG_mpp_sample_ao=y
 # CONFIG_mpp_sample_ao_resample_mixer is not set
 # CONFIG_mpp_sample_ao2ai_aec is not set
 # CONFIG_mpp_sample_ao2ai_aec_rate_mixer is not set
