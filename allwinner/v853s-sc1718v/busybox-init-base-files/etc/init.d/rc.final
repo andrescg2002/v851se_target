@@ -38,4 +38,4 @@ if [ -z "$(grep '\<vfat\>' /proc/mounts)" ]; then
     /bin/mount -t vfat /dev/mmcblk0p1 /mnt/extsd
 fi
 
-/usr/bin/sample_virvi2vo -path /usr/bin/sample_virvi2vo.conf &
+/usr/bin/sample_virvi2vo -path /usr/bin/sample_virvi2vo_v853s_sc1718v.conf &
