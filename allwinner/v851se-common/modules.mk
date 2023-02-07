@@ -122,6 +122,30 @@ endef
 
 $(eval $(call KernelPackage,net-xr819s))
 
+define KernelPackage/net-xr819
+  SUBMENU:=$(WIRELESS_MENU)
+  TITLE:=xr819 support (staging)
+  DEPENDS:= +xr819-firmware +@IPV6 +@USES_XR819 +@PACKAGE_xr819-rftest +@PACKAGE_xr819-rftest
+  KCONFIG:=\
+	CONFIG_XR819_WLAN=m \
+	CONFIG_PM=y\
+	CONFIG_RFKILL=y \
+	CONFIG_RFKILL_PM=y \
+	CONFIG_RFKILL_GPIO=y
+
+  FILES:=$(LINUX_DIR)/drivers/net/wireless/xr819/wlan/xradio_core.ko
+  FILES+=$(LINUX_DIR)/drivers/net/wireless/xr819/wlan/xradio_wlan.ko
+  FILES+=$(LINUX_DIR)/drivers/net/wireless/xr819/umac/xradio_mac.ko
+  AUTOLOAD:=$(call AutoProbe, xradio_mac xradio_core xradio_wlan)
+
+endef
+
+define KernelPackage/net-xr819/description
+ Kernel modules for xr819 support
+endef
+
+$(eval $(call KernelPackage,net-xr819))
+
 define KernelPackage/net-xr829-40M
   SUBMENU:=$(WIRELESS_MENU)
   TITLE:=xr829 support (staging)
