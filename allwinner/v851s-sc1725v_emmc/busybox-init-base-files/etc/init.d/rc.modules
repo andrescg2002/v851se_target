@@ -1,0 +1,22 @@
+#!/bin/sh
+
+echo "------run rc.modules file-----"
+#insmod sound modules
+#echo "insmod sound modules"
+#/sbin/insmod /lib/modules/3.4.39/snd-seq-device.ko
+#/sbin/insmod /lib/modules/3.4.39/snd-mixer-oss.ko
+#/sbin/insmod /lib/modules/3.4.39/snd-pcm-oss.ko
+
+#touchscreen
+#echo 415 > /sys/class/gpio/export
+#echo out > /sys/class/gpio/gpio415/direction
+#echo 0 > /sys/class/gpio/gpio415/value
+#usleep 100000
+#echo 1 > /sys/class/gpio/gpio415/value
+insmod /lib/modules/4.9.191/gslX680new.ko
+
+#spk
+#echo 402 > /sys/class/gpio/export
+#echo out > /sys/class/gpio/gpio402/direction
+#echo 1 > /sys/class/gpio/gpio402/value
+
