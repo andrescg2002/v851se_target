@@ -8,24 +8,6 @@ MODULES_DIR="/lib/modules/`uname -r`"
 start() {
     printf "Load mpp modules\n"
     
-#set camera pwdn & reset
-	#pwdn
-	echo 409 > /sys/class/gpio/export
-	echo out > /sys/class/gpio/gpio409/direction
-	echo 0 > /sys/class/gpio/gpio409/value
-	#usleep 10000
-	
-	#reset
-	echo 408 > /sys/class/gpio/export
-	echo out > /sys/class/gpio/gpio408/direction
-	echo 0 > /sys/class/gpio/gpio408/value
-	usleep 10000
-			
-	echo 1 > /sys/class/gpio/gpio409/value
-	usleep 10000
-	
-	echo 1 > /sys/class/gpio/gpio408/value
-	usleep 10000
 	
     insmod $MODULES_DIR/videobuf2-core.ko
     insmod $MODULES_DIR/videobuf2-memops.ko
