@@ -10,4 +10,9 @@ echo "------run rc.modules file-----"
 #touchscreen
 insmod /lib/modules/4.9.191/gslX680new.ko
 
-
+#enable usb hub
+#echo 412 > /sys/class/gpio/export
+#echo out > /sys/class/gpio/gpio412/direction
+#echo 1 > /sys/class/gpio/gpio412/value
+#set usb host
+#cat /sys/devices/platform/soc/usbc0/usb_host
