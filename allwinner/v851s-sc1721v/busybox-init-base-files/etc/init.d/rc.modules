@@ -6,6 +6,10 @@ echo "------run rc.modules file-----"
 #/sbin/insmod /lib/modules/3.4.39/snd-seq-device.ko
 #/sbin/insmod /lib/modules/3.4.39/snd-mixer-oss.ko
 #/sbin/insmod /lib/modules/3.4.39/snd-pcm-oss.ko
+
+#touchscreen
+insmod /lib/modules/4.9.191/gslX680new.ko
+
 #xr829
 #insmod /lib/modules/4.9.191/xradio_mac.ko
 #insmod /lib/modules/4.9.191/xradio_core.ko
