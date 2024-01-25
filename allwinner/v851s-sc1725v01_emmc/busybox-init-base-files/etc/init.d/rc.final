@@ -1,0 +1,50 @@
+#!/bin/sh
+
+echo "------run rc.final file-----"
+#echo "insmod wifi modules"
+#insmod  /lib/modules/3.4.39/8723ds.ko
+#insmod  /lib/modules/3.4.39/bcmdhd.ko
+#insmod  /lib/modules/3.4.39/xradio_mac.ko
+#insmod  /lib/modules/3.4.39/xradio_core.ko
+#insmod  /lib/modules/3.4.39/xradio_wlan.ko
+
+export LD_LIBRARY_PATH=/usr/lib/eyesee-mpp:${LD_LIBRARY_PATH}
+ulimit -c unlimited
+echo /mnt/extsd/coredump-%e-%p-%s-%t > /proc/sys/kernel/core_pattern
+
+for i in /etc/init.d/S??* ;do
+
+     # Ignore dangling symlinks (if any).
+     [ ! -f "$i" ] && continue
+
+     case "$i" in
+    *.sh)
+        # Source shell script for speed.
+        (
+        trap - INT QUIT TSTP
+        set start
+        . $i
+        )
+        ;;
+    *)
+        # No sh extension, so fork subprocess.
+        $i start
+        ;;
+    esac
+done
+
+if [ -z "$(grep '\<vfat\>' /proc/mounts)" ]; then
+    ! /bin/mount -t vfat /dev/mmcblk1 /mnt/extsd 2>/dev/null &&
+    /bin/mount -t vfat /dev/mmcblk1p1 /mnt/extsd
+fi
+
+/usr/bin/sample_ao -path /usr/bin/sample_ao_startup.conf
+
+if [ -d /mnt/extsd/pcba_test ]; then	
+	/usr/bin/pcba_test.sh
+else
+	/usr/bin/sample_virvi2vo -path /usr/bin/sample_virvi2vo_v851s_sc1725v.conf &
+fi
+
+/etc/bluetooth/bt_init.sh
+/usr/bin/bt_test -p a2dp-sink
