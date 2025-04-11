@@ -3,8 +3,8 @@
 # mk missing dev node
 
 start() {
-    mkdir /dev/pts
-    mkdir /dev/shm
+    [ ! -d "/dev/pts" ] && mkdir /dev/pts
+    [ ! -d "/dev/shm" ] && mkdir /dev/shm
     mount -t devpts /dev/pts /dev/pts
 }
 

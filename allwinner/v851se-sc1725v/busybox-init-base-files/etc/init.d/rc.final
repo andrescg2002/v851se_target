@@ -33,9 +33,9 @@ for i in /etc/init.d/S??* ;do
     esac
 done
 
-if [ -z "$(grep '\<vfat\>' /proc/mounts)" ]; then
-    ! /bin/mount -t vfat /dev/mmcblk0 /mnt/extsd 2>/dev/null &&
-    /bin/mount -t vfat /dev/mmcblk0p1 /mnt/extsd
-fi
+#if [ -z "$(grep '\<vfat\>' /proc/mounts)" ]; then
+#    ! /bin/mount -t vfat /dev/mmcblk0 /mnt/extsd 2>/dev/null &&
+#    /bin/mount -t vfat /dev/mmcblk0p1 /mnt/extsd
+#fi
 
-/usr/bin/sample_rtsp -path /usr/bin/sample_rtsp.conf &
+#/usr/bin/sample_rtsp -path /usr/bin/sample_rtsp.conf &

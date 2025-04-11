@@ -9,8 +9,8 @@ KLOGD_ARGS=-n
 
 start() {
 	printf "Starting logging: "
-	start-stop-daemon -b -S -q -m -p /var/run/syslogd.pid --exec /sbin/syslogd -- $SYSLOGD_ARGS
-	start-stop-daemon -b -S -q -m -p /var/run/klogd.pid --exec /sbin/klogd -- $KLOGD_ARGS
+	start-stop-daemon -b -S -x /sbin/syslogd -p /var/run/syslogd.pid -- $SYSLOGD_ARGS
+	start-stop-daemon -b -S -x /sbin/klogd -p /var/run/klogd.pid -- $KLOGD_ARGS
 	echo "OK"
 }
 

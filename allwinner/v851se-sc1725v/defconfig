@@ -4,16 +4,12 @@
 #
 CONFIG_MODULES=y
 CONFIG_HAVE_DOT_CONFIG=y
-# CONFIG_TARGET_v851s_anting_spinand is not set
 # CONFIG_TARGET_v851s_perf1 is not set
 # CONFIG_TARGET_v851s_sc1721v is not set
 # CONFIG_TARGET_v851s_sc1725v01_emmc is not set
-# CONFIG_TARGET_v851s_sc1725v01_nor is not set
 # CONFIG_TARGET_v851s_sc1725v_dual is not set
 # CONFIG_TARGET_v851s_sc1725v_emmc is not set
 # CONFIG_TARGET_v851s_sc1725v_nor is not set
-# CONFIG_TARGET_v851s_sc1725v_spinand is not set
-# CONFIG_TARGET_v851s_sc1730v1_dual is not set
 # CONFIG_TARGET_v851se_perf1 is not set
 # CONFIG_TARGET_v851se_sc1716v is not set
 CONFIG_TARGET_v851se_sc1725v=y
@@ -2228,133 +2224,12 @@ CONFIG_LIBSTDCPP_FILE_SPEC="./lib/libstdc++.so.*"
 # CONFIG_PACKAGE_eyesee-mpp-cloud is not set
 # CONFIG_PACKAGE_eyesee-mpp-custom_aw is not set
 # CONFIG_PACKAGE_eyesee-mpp-dragonboard is not set
-CONFIG_PACKAGE_eyesee-mpp-external=y
-# CONFIG_mpp_external_sqlite is not set
-# CONFIG_mpp_external_civetweb is not set
-CONFIG_mpp_external_lz4=y
-# CONFIG_mpp_external_uvoice is not set
-# CONFIG_mpp_external_jsoncpp is not set
-# CONFIG_mpp_external_sound_controler is not set
-CONFIG_PACKAGE_eyesee-mpp-framework=y
-# CONFIG_mpp_framework_videoresizer is not set
-CONFIG_PACKAGE_eyesee-mpp-middleware=y
-# CONFIG_mpp_support_fastboot is not set
-CONFIG_select_sensor=y
-# CONFIG_imx386 is not set
-# CONFIG_gc4663 is not set
-CONFIG_gc2053=y
-CONFIG_sc4336=y
-CONFIG_mpp_fwrite_method_vfs=y
-# CONFIG_mpp_fwrite_method_directIO is not set
-CONFIG_mpp_hw_display=y
-CONFIG_mpp_vi=y
-CONFIG_mpp_vo=y
-# CONFIG_mpp_textenc is not set
-CONFIG_mpp_venc=y
-CONFIG_mpp_vdec=y
-CONFIG_mpp_aio=y
-CONFIG_mpp_aenc=y
-CONFIG_mpp_aenc_pcm=y
-CONFIG_mpp_aenc_g711=y
-CONFIG_mpp_aenc_g726=y
-CONFIG_mpp_aenc_aac=y
-CONFIG_mpp_aenc_mp3=y
-CONFIG_mpp_adec=y
-CONFIG_mpp_muxer=y
-# CONFIG_mpp_gps_pack_in_track is not set
-CONFIG_mpp_gps_pack_in_mdat=y
-CONFIG_mpp_demuxer=y
-# CONFIG_mpp_adas_detect is not set
-# CONFIG_mpp_adas_detect_v2 is not set
-# CONFIG_mpp_aec is not set
-CONFIG_mpp_softdrc=y
-# CONFIG_mpp_agc is not set
-CONFIG_mpp_ai_agc=y
-CONFIG_mpp_ans=y
-CONFIG_mpp_ans_libwebrtc=y
-# CONFIG_mpp_ans_liblstm is not set
-# CONFIG_mpp_uvc is not set
-CONFIG_mpp_iommu=y
-CONFIG_mpp_compile_static_lib=y
-# CONFIG_mpp_compile_dynamic_lib is not set
-# CONFIG_mpp_systrace is not set
-CONFIG_mpp_sample=y
-# CONFIG_mpp_sample_adec is not set
-# CONFIG_mpp_sample_adec2ao is not set
-# CONFIG_mpp_sample_aec is not set
-# CONFIG_mpp_sample_aenc is not set
-CONFIG_mpp_sample_ai=y
-# CONFIG_mpp_sample_ai2aenc is not set
-# CONFIG_mpp_sample_ai2ao is not set
-# CONFIG_mpp_sample_ai2aenc2muxer is not set
-CONFIG_mpp_sample_ao=y
-# CONFIG_mpp_sample_ao_resample_mixer is not set
-# CONFIG_mpp_sample_ao2ai_aec is not set
-# CONFIG_mpp_sample_ao2ai_aec_rate_mixer is not set
-# CONFIG_mpp_sample_aoSync is not set
-# CONFIG_mpp_sample_CodecParallel is not set
-# CONFIG_mpp_sample_demux is not set
-# CONFIG_mpp_sample_demux2adec is not set
-# CONFIG_mpp_sample_demux2adec2ao is not set
-# CONFIG_mpp_sample_demux2vdec is not set
-# CONFIG_mpp_sample_demux2vdec_saveFrame is not set
-# CONFIG_mpp_sample_demux2vdec2vo is not set
-# CONFIG_mpp_sample_driverVipp is not set
-# CONFIG_mpp_sample_file_repair is not set
-# CONFIG_mpp_sample_g2d is not set
-# CONFIG_mpp_sample_glog is not set
-# CONFIG_mpp_sample_hello is not set
-# CONFIG_mpp_sample_isposd is not set
-# CONFIG_mpp_sample_MotionDetect is not set
-# CONFIG_mpp_sample_motor is not set
-# CONFIG_mpp_sample_multi_vi2venc2muxer is not set
-# CONFIG_mpp_sample_odet_demo is not set
-# CONFIG_mpp_sample_OnlineVenc is not set
-# CONFIG_mpp_sample_PersonDetect is not set
-# CONFIG_mpp_sample_pthread_cancel is not set
-# CONFIG_mpp_sample_recorder is not set
-# CONFIG_mpp_sample_region is not set
-# CONFIG_mpp_sample_RegionDetect is not set
-CONFIG_mpp_sample_rtsp=y
-# CONFIG_mpp_sample_smartIPC_demo is not set
-# CONFIG_mpp_sample_smartPreview_demo is not set
-# CONFIG_mpp_sample_select is not set
-# CONFIG_mpp_sample_takePicture is not set
-# CONFIG_mpp_sample_timelapse is not set
-# CONFIG_mpp_sample_twinchn_virvi2venc2ce is not set
-# CONFIG_mpp_sample_UILayer is not set
-# CONFIG_mpp_sample_vdec is not set
-# CONFIG_mpp_sample_venc is not set
-# CONFIG_mpp_sample_venc2muxer is not set
-# CONFIG_mpp_sample_vencGdcZoom is not set
-# CONFIG_mpp_sample_vencQpMap is not set
-# CONFIG_mpp_sample_vencRecreate is not set
-# CONFIG_mpp_sample_vi_g2d is not set
-# CONFIG_mpp_sample_vi_reset is not set
-# CONFIG_mpp_sample_vin_isp_test is not set
-# CONFIG_mpp_sample_virvi is not set
-# CONFIG_mpp_sample_virvi2venc is not set
-# CONFIG_mpp_sample_virvi2venc2ce is not set
-# CONFIG_mpp_sample_virvi2venc2muxer is not set
-# CONFIG_mpp_sample_virvi2vo is not set
-# CONFIG_mpp_sample_virvi2vo_zoom is not set
-# CONFIG_mpp_sample_vo is not set
+# CONFIG_PACKAGE_eyesee-mpp-external is not set
+# CONFIG_PACKAGE_eyesee-mpp-framework is not set
+# CONFIG_PACKAGE_eyesee-mpp-middleware is not set
 # CONFIG_PACKAGE_eyesee-mpp-private-onvif is not set
-CONFIG_PACKAGE_eyesee-mpp-private-rtsp=y
-CONFIG_PACKAGE_eyesee-mpp-system=y
-# CONFIG_wifi_8189ftv is not set
-# CONFIG_wifi_ap6181 is not set
-# CONFIG_wifi_ap6255 is not set
-# CONFIG_wifi_ap6335 is not set
-# CONFIG_wifi_xr819 is not set
-CONFIG_wifi_disable=y
-# CONFIG_mpp_system_newfs_msdos is not set
-# CONFIG_mpp_system_reboot_efex is not set
-# CONFIG_mpp_system_luaconfig is not set
-# CONFIG_mpp_system_wifi is not set
-# CONFIG_mpp_system_smartlink is not set
-CONFIG_mpp_system_rgb_ctrl=y
-# CONFIG_mpp_system_ntpclient is not set
+# CONFIG_PACKAGE_eyesee-mpp-private-rtsp is not set
+# CONFIG_PACKAGE_eyesee-mpp-system is not set
 
 #
 # smart_card
@@ -2386,18 +2261,13 @@ CONFIG_mpp_system_rgb_ctrl=y
 # wireless
 #
 # CONFIG_PACKAGE_btmanager-v4.0 is not set
-CONFIG_PACKAGE_wifimanager-v2.0=y
-CONFIG_PACKAGE_wifimanager-v2.0-demo=y
-CONFIG_WMG_PROTOCOL_SOFTAP=y
-# CONFIG_WMG_PROTOCOL_BLE is not set
-# CONFIG_WMG_PROTOCOL_XCONFIG is not set
-# CONFIG_WMG_PROTOCOL_SOUNDWAVE is not set
-CONFIG_PACKAGE_wirelesscommon=y
+# CONFIG_PACKAGE_wifimanager-v2.0 is not set
+# CONFIG_PACKAGE_wirelesscommon is not set
 # CONFIG_PACKAGE_xrlink is not set
 # CONFIG_PACKAGE_MtpDaemon is not set
 # CONFIG_PACKAGE_aactd is not set
 # CONFIG_PACKAGE_aactd-lib is not set
-CONFIG_PACKAGE_adb=y
+# CONFIG_PACKAGE_adb is not set
 # CONFIG_PACKAGE_adbd_auth_service is not set
 # CONFIG_PACKAGE_alsa-conf-aw is not set
 # CONFIG_PACKAGE_alsa-plugins-aw is not set
@@ -2452,7 +2322,6 @@ CONFIG_PACKAGE_ota-burnboot=y
 # CONFIG_PACKAGE_resample is not set
 # CONFIG_PACKAGE_resnet50-demo is not set
 # CONFIG_PACKAGE_snapcast is not set
-# CONFIG_PACKAGE_softap is not set
 # CONFIG_PACKAGE_stress-ng is not set
 # CONFIG_PACKAGE_sunxiCamera is not set
 # CONFIG_PACKAGE_sunxiCamera_demo is not set
@@ -2597,7 +2466,10 @@ CONFIG_SWUPDATE_CONFIG_SSL_IMPL_NONE=y
 # Image encryption needs an SSL implementation
 #
 # CONFIG_SWUPDATE_CONFIG_SURICATTA is not set
-# CONFIG_WEBSERVER is not set
+CONFIG_WEBSERVER=y
+CONFIG_SWUPDATE_CONFIG_MONGOOSE=y
+# CONFIG_SWUPDATE_CONFIG_MONGOOSEIPV6 is not set
+# CONFIG_SWUPDATE_CONFIG_MONGOOSESSL is not set
 CONFIG_SWUPDATE_CONFIG_GUNZIP=y
 # CONFIG_SWUPDATE_CONFIG_ZSTD is not set
 
@@ -2700,7 +2572,7 @@ CONFIG_FIRMWARE_PATH="/lib/firmware/"
 # CONFIG_PACKAGE_ssv6155-firmware is not set
 # CONFIG_PACKAGE_ssv6158-firmware is not set
 # CONFIG_PACKAGE_uwe5622-firmware is not set
-CONFIG_PACKAGE_xr819-firmware=y
+# CONFIG_PACKAGE_xr819-firmware is not set
 # CONFIG_PACKAGE_xr819a-firmware is not set
 # CONFIG_PACKAGE_xr819s-firmware is not set
 # CONFIG_PACKAGE_xr829-firmware is not set
@@ -2746,9 +2618,9 @@ CONFIG_PACKAGE_xr819-firmware=y
 # CONFIG_PACKAGE_libchipmunk is not set
 # CONFIG_PACKAGE_libdrm is not set
 # CONFIG_PACKAGE_libepoxy is not set
-CONFIG_PACKAGE_libjpeg=y
+# CONFIG_PACKAGE_libjpeg is not set
 # CONFIG_PACKAGE_libpixman is not set
-CONFIG_PACKAGE_libpng=y
+# CONFIG_PACKAGE_libpng is not set
 # CONFIG_PACKAGE_librsvg is not set
 # CONFIG_PACKAGE_libump is not set
 # CONFIG_PACKAGE_libwebp is not set
@@ -2758,8 +2630,8 @@ CONFIG_PACKAGE_libpng=y
 # Littlevgl
 #
 # CONFIG_PACKAGE_lv_examples is not set
-CONFIG_LVGL8_USE_SUNXIFB_DOUBLE_BUFFER=y
-CONFIG_LVGL8_USE_SUNXIFB_CACHE=y
+# CONFIG_LVGL8_USE_SUNXIFB_DOUBLE_BUFFER is not set
+# CONFIG_LVGL8_USE_SUNXIFB_CACHE is not set
 # CONFIG_LVGL8_USE_SUNXIFB_G2D is not set
 # CONFIG_LVGL8_USE_SUNXIFB_G2D_ROTATE is not set
 # CONFIG_LVGL8_USE_FREETYPE is not set
@@ -2824,7 +2696,7 @@ CONFIG_QT5_USE_PREBUILT=y
 # CONFIG_PACKAGE_kmod-md-mod is not set
 # CONFIG_PACKAGE_kmod-nbd is not set
 # CONFIG_PACKAGE_kmod-scsi-cdrom is not set
-# CONFIG_PACKAGE_kmod-scsi-core is not set
+CONFIG_PACKAGE_kmod-scsi-core=y
 # CONFIG_PACKAGE_kmod-scsi-generic is not set
 # CONFIG_PACKAGE_kmod-scsi-tape is not set
 
@@ -2941,8 +2813,8 @@ CONFIG_QT5_USE_PREBUILT=y
 #
 # CONFIG_PACKAGE_kmod-hid is not set
 # CONFIG_PACKAGE_kmod-hid-generic is not set
-CONFIG_PACKAGE_kmod-input-core=y
-CONFIG_PACKAGE_kmod-input-evdev=y
+# CONFIG_PACKAGE_kmod-input-core is not set
+# CONFIG_PACKAGE_kmod-input-evdev is not set
 # CONFIG_PACKAGE_kmod-input-gpio-encoder is not set
 # CONFIG_PACKAGE_kmod-input-gpio-keys is not set
 # CONFIG_PACKAGE_kmod-input-gpio-keys-polled is not set
@@ -2971,12 +2843,13 @@ CONFIG_PACKAGE_kmod-input-evdev=y
 # CONFIG_PACKAGE_kmod-ledtrig-oneshot is not set
 # CONFIG_PACKAGE_kmod-ledtrig-timer is not set
 # CONFIG_PACKAGE_kmod-ledtrig-transient is not set
+# CONFIG_PACKAGE_kmod-ledtrig-usbdev is not set
 
 #
 # Libraries
 #
 # CONFIG_PACKAGE_kmod-lib-cordic is not set
-# CONFIG_PACKAGE_kmod-lib-crc-ccitt is not set
+CONFIG_PACKAGE_kmod-lib-crc-ccitt=y
 # CONFIG_PACKAGE_kmod-lib-crc-itu-t is not set
 # CONFIG_PACKAGE_kmod-lib-crc16 is not set
 # CONFIG_PACKAGE_kmod-lib-crc32c is not set
@@ -2990,7 +2863,7 @@ CONFIG_PACKAGE_kmod-input-evdev=y
 #
 # Native Language Support
 #
-# CONFIG_PACKAGE_kmod-nls-base is not set
+CONFIG_PACKAGE_kmod-nls-base=y
 # CONFIG_PACKAGE_kmod-nls-cp1250 is not set
 # CONFIG_PACKAGE_kmod-nls-cp1251 is not set
 # CONFIG_PACKAGE_kmod-nls-cp437 is not set
@@ -3111,13 +2984,21 @@ CONFIG_PACKAGE_kmod-input-evdev=y
 # CONFIG_PACKAGE_kmod-nat46 is not set
 # CONFIG_PACKAGE_kmod-netem is not set
 # CONFIG_PACKAGE_kmod-pktgen is not set
-# CONFIG_PACKAGE_kmod-ppp is not set
+CONFIG_PACKAGE_kmod-ppp=y
+# CONFIG_PACKAGE_kmod-mppe is not set
+# CONFIG_PACKAGE_kmod-ppp-synctty is not set
+# CONFIG_PACKAGE_kmod-pppoa is not set
+# CONFIG_PACKAGE_kmod-pppoe is not set
+# CONFIG_PACKAGE_kmod-pppol2tp is not set
+# CONFIG_PACKAGE_kmod-pppox is not set
+# CONFIG_PACKAGE_kmod-pptp is not set
 # CONFIG_PACKAGE_kmod-sched is not set
 # CONFIG_PACKAGE_kmod-sched-connmark is not set
 # CONFIG_PACKAGE_kmod-sched-core is not set
 # CONFIG_PACKAGE_kmod-sched-esfq is not set
 # CONFIG_PACKAGE_kmod-sctp is not set
 # CONFIG_PACKAGE_kmod-sit is not set
+CONFIG_PACKAGE_kmod-slhc=y
 # CONFIG_PACKAGE_kmod-slip is not set
 # CONFIG_PACKAGE_kmod-stp is not set
 # CONFIG_PACKAGE_kmod-trelay is not set
@@ -3158,14 +3039,34 @@ CONFIG_PACKAGE_kmod-input-evdev=y
 # CONFIG_PACKAGE_kmod-usb-acm is not set
 # CONFIG_PACKAGE_kmod-usb-atm is not set
 # CONFIG_PACKAGE_kmod-usb-cm109 is not set
-# CONFIG_PACKAGE_kmod-usb-core is not set
+CONFIG_PACKAGE_kmod-usb-core=y
 # CONFIG_PACKAGE_kmod-usb-dwc2 is not set
 # CONFIG_PACKAGE_kmod-usb-dwc3 is not set
 # CONFIG_PACKAGE_kmod-usb-hid is not set
 # CONFIG_PACKAGE_kmod-usb-net is not set
 # CONFIG_PACKAGE_kmod-usb-ohci is not set
 # CONFIG_PACKAGE_kmod-usb-printer is not set
-# CONFIG_PACKAGE_kmod-usb-serial is not set
+CONFIG_PACKAGE_kmod-usb-serial=y
+# CONFIG_PACKAGE_kmod-usb-serial-ark3116 is not set
+# CONFIG_PACKAGE_kmod-usb-serial-belkin is not set
+# CONFIG_PACKAGE_kmod-usb-serial-ch341 is not set
+# CONFIG_PACKAGE_kmod-usb-serial-cp210x is not set
+# CONFIG_PACKAGE_kmod-usb-serial-cypress-m8 is not set
+# CONFIG_PACKAGE_kmod-usb-serial-ftdi is not set
+# CONFIG_PACKAGE_kmod-usb-serial-garmin is not set
+# CONFIG_PACKAGE_kmod-usb-serial-ipw is not set
+# CONFIG_PACKAGE_kmod-usb-serial-keyspan is not set
+# CONFIG_PACKAGE_kmod-usb-serial-mct is not set
+# CONFIG_PACKAGE_kmod-usb-serial-mos7720 is not set
+CONFIG_PACKAGE_kmod-usb-serial-option=y
+# CONFIG_PACKAGE_kmod-usb-serial-oti6858 is not set
+# CONFIG_PACKAGE_kmod-usb-serial-pl2303 is not set
+# CONFIG_PACKAGE_kmod-usb-serial-qualcomm is not set
+# CONFIG_PACKAGE_kmod-usb-serial-sierrawireless is not set
+# CONFIG_PACKAGE_kmod-usb-serial-simple is not set
+# CONFIG_PACKAGE_kmod-usb-serial-ti-usb is not set
+# CONFIG_PACKAGE_kmod-usb-serial-visor is not set
+CONFIG_PACKAGE_kmod-usb-serial-wwan=y
 # CONFIG_PACKAGE_kmod-usb-storage is not set
 # CONFIG_PACKAGE_kmod-usb-storage-extras is not set
 # CONFIG_PACKAGE_kmod-usb-uhci is not set
@@ -3191,7 +3092,7 @@ CONFIG_PACKAGE_kmod-input-evdev=y
 # CONFIG_PACKAGE_kmod-fbcon is not set
 # CONFIG_PACKAGE_kmod-ge8300-km-opencl is not set
 # CONFIG_PACKAGE_kmod-video-core is not set
-CONFIG_PACKAGE_kmod-vin-v4l2=y
+# CONFIG_PACKAGE_kmod-vin-v4l2 is not set
 
 #
 # Virtualization Support
@@ -3216,13 +3117,13 @@ CONFIG_PACKAGE_kmod-vin-v4l2=y
 #
 # Wireless Drivers
 #
-CONFIG_PACKAGE_kmod-cfg80211=y
+# CONFIG_PACKAGE_kmod-cfg80211 is not set
 # CONFIG_PACKAGE_kmod-esp8089 is not set
 # CONFIG_PACKAGE_kmod-net-mrvl8977 is not set
 # CONFIG_PACKAGE_kmod-net-qca9377 is not set
 # CONFIG_PACKAGE_kmod-net-rtl8188eu is not set
 # CONFIG_PACKAGE_kmod-net-rtl8723bs is not set
-CONFIG_PACKAGE_kmod-net-xr819=y
+# CONFIG_PACKAGE_kmod-net-xr819 is not set
 # CONFIG_PACKAGE_kmod-net-xr819s is not set
 # CONFIG_PACKAGE_kmod-net-xr819s-40M is not set
 # CONFIG_PACKAGE_kmod-net-xr829 is not set
@@ -3624,7 +3525,7 @@ CONFIG_OPENSSL_COMPAT_API="1.1.0"
 # database
 #
 # CONFIG_PACKAGE_libpq is not set
-CONFIG_PACKAGE_libsqlite3=y
+# CONFIG_PACKAGE_libsqlite3 is not set
 
 #
 # gnome
@@ -3639,21 +3540,7 @@ CONFIG_PACKAGE_libsqlite3=y
 # CONFIG_PACKAGE_SQLiteCpp is not set
 # CONFIG_PACKAGE_abseil-cpp is not set
 # CONFIG_PACKAGE_af-alg is not set
-CONFIG_PACKAGE_alsa-lib=y
-
-#
-# Configuration
-#
-# CONFIG_ALSA_LIB_EXTRA_resmgr is not set
-# CONFIG_ALSA_LIB_EXTRA_aload is not set
-CONFIG_ALSA_LIB_EXTRA_mixer=y
-CONFIG_ALSA_LIB_EXTRA_pcm=y
-# CONFIG_ALSA_LIB_EXTRA_rawmidi is not set
-CONFIG_ALSA_LIB_EXTRA_hwdep=y
-CONFIG_ALSA_LIB_EXTRA_seq=y
-# CONFIG_ALSA_LIB_EXTRA_ucm is not set
-# CONFIG_ALSA_LIB_EXTRA_topology is not set
-# CONFIG_ALSA_LIB_EXTRA_alisp is not set
+# CONFIG_PACKAGE_alsa-lib is not set
 # CONFIG_PACKAGE_alsa-plugins is not set
 # CONFIG_PACKAGE_argp-standalone is not set
 # CONFIG_PACKAGE_bluez-libs is not set
@@ -3666,7 +3553,7 @@ CONFIG_ALSA_LIB_EXTRA_seq=y
 # CONFIG_PACKAGE_enchant is not set
 # CONFIG_PACKAGE_flann is not set
 # CONFIG_PACKAGE_gflags is not set
-CONFIG_PACKAGE_glog=y
+# CONFIG_PACKAGE_glog is not set
 # CONFIG_PACKAGE_gperftools is not set
 # CONFIG_PACKAGE_icu is not set
 # CONFIG_PACKAGE_libao is not set
@@ -3713,7 +3600,7 @@ CONFIG_PACKAGE_libconfig=y
 # CONFIG_PACKAGE_libfribidi is not set
 # CONFIG_PACKAGE_libgcrypt is not set
 # CONFIG_PACKAGE_libgd is not set
-# CONFIG_PACKAGE_libgdbm is not set
+CONFIG_PACKAGE_libgdbm=y
 # CONFIG_PACKAGE_libgee is not set
 # CONFIG_PACKAGE_libgmp is not set
 # CONFIG_PACKAGE_libgpg-error is not set
@@ -3732,7 +3619,7 @@ CONFIG_PACKAGE_libconfig=y
 # CONFIG_PACKAGE_libjson-c is not set
 # CONFIG_PACKAGE_libkmod is not set
 # CONFIG_PACKAGE_libltdl is not set
-CONFIG_PACKAGE_liblua=y
+# CONFIG_PACKAGE_liblua is not set
 # CONFIG_PACKAGE_liblua5.3 is not set
 # CONFIG_PACKAGE_liblz4 is not set
 # CONFIG_PACKAGE_liblzo is not set
@@ -3774,7 +3661,7 @@ CONFIG_PACKAGE_libnl-tiny=y
 # CONFIG_PACKAGE_libopus is not set
 # CONFIG_PACKAGE_libpam is not set
 # CONFIG_PACKAGE_libpcap is not set
-# CONFIG_PACKAGE_libpcre is not set
+CONFIG_PACKAGE_libpcre=y
 # CONFIG_PACKAGE_libpcre16 is not set
 # CONFIG_PACKAGE_libpcrecpp is not set
 # CONFIG_PACKAGE_libpopt is not set
@@ -3857,38 +3744,7 @@ CONFIG_PACKAGE_libuuid=y
 # CONFIG_PACKAGE_terminfo is not set
 # CONFIG_PACKAGE_tinyalsa-lib is not set
 # CONFIG_PACKAGE_tinyxml2 is not set
-CONFIG_PACKAGE_tslib=y
-
-#
-# Configuration tslib features
-#
-CONFIG_TSLIB_ENABLE_input=y
-# CONFIG_TSLIB_ENABLE_debounce is not set
-# CONFIG_TSLIB_ENABLE_dejitter is not set
-# CONFIG_TSLIB_ENABLE_iir is not set
-# CONFIG_TSLIB_ENABLE_linear is not set
-# CONFIG_TSLIB_ENABLE_median is not set
-# CONFIG_TSLIB_ENABLE_pthres is not set
-# CONFIG_TSLIB_ENABLE_skip is not set
-# CONFIG_TSLIB_ENABLE_lowpass is not set
-# CONFIG_TSLIB_ENABLE_invert is not set
-# CONFIG_TSLIB_ENABLE_variance is not set
-# CONFIG_TSLIB_ENABLE_tatung is not set
-# CONFIG_TSLIB_ENABLE_touchkit is not set
-# CONFIG_TSLIB_ENABLE_waveshare is not set
-# CONFIG_TSLIB_ENABLE_ucb1x00 is not set
-# CONFIG_TSLIB_ENABLE_mk712 is not set
-# CONFIG_TSLIB_ENABLE_h3600 is not set
-# CONFIG_TSLIB_ENABLE_dmc is not set
-# CONFIG_TSLIB_ENABLE_linear-h2200 is not set
-# CONFIG_TSLIB_ENABLE_corgi is not set
-# CONFIG_TSLIB_ENABLE_collie is not set
-# CONFIG_TSLIB_ENABLE_arctic2 is not set
-# CONFIG_TSLIB_ENABLE_dmc_dus3000 is not set
-# CONFIG_TSLIB_ENABLE_cy8mrln-palmpre is not set
-# CONFIG_TSLIB_ENABLE_galax is not set
-# CONFIG_TSLIB_ENABLE_tests is not set
-# CONFIG_TSLIB_ENABLE_tools is not set
+# CONFIG_PACKAGE_tslib is not set
 CONFIG_PACKAGE_uclibcxx=y
 # CONFIG_PACKAGE_uriparser is not set
 # CONFIG_PACKAGE_uvoice is not set
@@ -3922,18 +3778,18 @@ CONFIG_PACKAGE_zlib=y
 # CONFIG_LUCI_LANG_sk is not set
 # CONFIG_LUCI_LANG_pl is not set
 # CONFIG_LUCI_LANG_uk is not set
-# CONFIG_LUCI_LANG_ru is not set
+# CONFIG_LUCI_LANG_ja is not set
 # CONFIG_LUCI_LANG_vi is not set
-# CONFIG_LUCI_LANG_de is not set
+# CONFIG_LUCI_LANG_he is not set
 # CONFIG_LUCI_LANG_ro is not set
-# CONFIG_LUCI_LANG_pt-br is not set
 # CONFIG_LUCI_LANG_ms is not set
 # CONFIG_LUCI_LANG_zh-cn is not set
-# CONFIG_LUCI_LANG_he is not set
+# CONFIG_LUCI_LANG_de is not set
 # CONFIG_LUCI_LANG_zh-tw is not set
 # CONFIG_LUCI_LANG_tr is not set
 # CONFIG_LUCI_LANG_sv is not set
-# CONFIG_LUCI_LANG_ja is not set
+# CONFIG_LUCI_LANG_ru is not set
+# CONFIG_LUCI_LANG_pt-br is not set
 # CONFIG_LUCI_LANG_el is not set
 # CONFIG_LUCI_LANG_ca is not set
 # CONFIG_LUCI_LANG_en is not set
@@ -4183,11 +4039,11 @@ CONFIG_PACKAGE_zlib=y
 #
 # SSH
 #
-# CONFIG_PACKAGE_openssh-client is not set
-# CONFIG_PACKAGE_openssh-client-utils is not set
-# CONFIG_PACKAGE_openssh-keygen is not set
+CONFIG_PACKAGE_openssh-client=y
+CONFIG_PACKAGE_openssh-client-utils=y
+CONFIG_PACKAGE_openssh-keygen=y
 # CONFIG_PACKAGE_openssh-moduli is not set
-# CONFIG_PACKAGE_openssh-server is not set
+CONFIG_PACKAGE_openssh-server=y
 # CONFIG_PACKAGE_openssh-server-pam is not set
 # CONFIG_PACKAGE_openssh-sftp-client is not set
 # CONFIG_PACKAGE_openssh-sftp-server is not set
@@ -4290,22 +4146,15 @@ CONFIG_PACKAGE_zlib=y
 # CONFIG_PACKAGE_hostapd-basic is not set
 # CONFIG_PACKAGE_hostapd-basic-openssl is not set
 # CONFIG_PACKAGE_hostapd-basic-wolfssl is not set
-CONFIG_PACKAGE_hostapd-common=y
+# CONFIG_PACKAGE_hostapd-common is not set
 # CONFIG_PACKAGE_hostapd-mini is not set
 # CONFIG_PACKAGE_hostapd-openssl is not set
-# CONFIG_PACKAGE_hostapd-utils is not set
 # CONFIG_PACKAGE_hostapd-wolfssl is not set
-CONFIG_PACKAGE_wpa-cli=y
 # CONFIG_PACKAGE_wpa-supplicant-basic is not set
-# CONFIG_PACKAGE_wpa-supplicant-mesh-openssl is not set
-# CONFIG_PACKAGE_wpa-supplicant-mesh-wolfssl is not set
 # CONFIG_PACKAGE_wpa-supplicant-mini is not set
 # CONFIG_PACKAGE_wpa-supplicant-openssl is not set
-# CONFIG_PACKAGE_wpa-supplicant-p2p is not set
 # CONFIG_PACKAGE_wpa-supplicant-wolfssl is not set
 # CONFIG_PACKAGE_wpa-supplicant is not set
-# CONFIG_WPA_RFKILL_SUPPORT is not set
-CONFIG_WPA_MSG_MIN_PRIORITY=3
 # CONFIG_WPA_WOLFSSL is not set
 # CONFIG_DRIVER_WEXT_SUPPORT is not set
 # CONFIG_DRIVER_11N_SUPPORT is not set
@@ -4313,11 +4162,9 @@ CONFIG_WPA_MSG_MIN_PRIORITY=3
 # CONFIG_DRIVER_11AX_SUPPORT is not set
 # CONFIG_WPA_ENABLE_WEP is not set
 # CONFIG_PACKAGE_wpad is not set
-CONFIG_PACKAGE_wpad-basic=y
+# CONFIG_PACKAGE_wpad-basic is not set
 # CONFIG_PACKAGE_wpad-basic-openssl is not set
 # CONFIG_PACKAGE_wpad-basic-wolfssl is not set
-# CONFIG_PACKAGE_wpad-mesh-openssl is not set
-# CONFIG_PACKAGE_wpad-mesh-wolfssl is not set
 # CONFIG_PACKAGE_wpad-mini is not set
 # CONFIG_PACKAGE_wpad-openssl is not set
 # CONFIG_PACKAGE_wpad-wolfssl is not set
@@ -4331,7 +4178,7 @@ CONFIG_PACKAGE_wpad-basic=y
 # CONFIG_PACKAGE_alfred is not set
 # CONFIG_PACKAGE_alljoyn is not set
 # CONFIG_PACKAGE_authsae is not set
-# CONFIG_PACKAGE_chat is not set
+CONFIG_PACKAGE_chat=y
 # CONFIG_PACKAGE_ds-lite is not set
 # CONFIG_PACKAGE_etherwake is not set
 # CONFIG_PACKAGE_ethtool is not set
@@ -4385,8 +4232,15 @@ CONFIG_PACKAGE_iperf=y
 # CONFIG_PACKAGE_omcproxy is not set
 # CONFIG_PACKAGE_openldap-server is not set
 # CONFIG_PACKAGE_oping is not set
-# CONFIG_PACKAGE_ppp is not set
+CONFIG_PACKAGE_ppp=y
+# CONFIG_PACKAGE_ppp-mod-pppoa is not set
+# CONFIG_PACKAGE_ppp-mod-pppoe is not set
+# CONFIG_PACKAGE_ppp-mod-pppol2tp is not set
+# CONFIG_PACKAGE_ppp-mod-pptp is not set
+# CONFIG_PACKAGE_ppp-mod-radius is not set
 # CONFIG_PACKAGE_ppp-multilink is not set
+# CONFIG_PACKAGE_pppdump is not set
+# CONFIG_PACKAGE_pppstats is not set
 # CONFIG_PACKAGE_rssileds is not set
 # CONFIG_PACKAGE_samba36-client is not set
 # CONFIG_PACKAGE_samba36-server is not set
@@ -4592,8 +4446,8 @@ CONFIG_PACKAGE_blkid=y
 # CONFIG_PACKAGE_broadcom-rftest is not set
 # CONFIG_PACKAGE_realtek-rftest is not set
 # CONFIG_PACKAGE_ssv6x5x-rftest is not set
-CONFIG_PACKAGE_xr819-rftest=y
-CONFIG_PACKAGE_xr819s-rftest=y
+# CONFIG_PACKAGE_xr819-rftest is not set
+# CONFIG_PACKAGE_xr819s-rftest is not set
 # CONFIG_PACKAGE_xr829-rftest is not set
 
 #
@@ -4623,7 +4477,7 @@ CONFIG_PACKAGE_xr819s-rftest=y
 # CONFIG_PACKAGE_cpulimit-ng is not set
 # CONFIG_PACKAGE_cxdish is not set
 # CONFIG_PACKAGE_dbus is not set
-# CONFIG_PACKAGE_dmesg is not set
+CONFIG_PACKAGE_dmesg=y
 # CONFIG_PACKAGE_dropbearconvert is not set
 # CONFIG_PACKAGE_dump1090 is not set
 # CONFIG_PACKAGE_fbtest is not set
