@@ -1,0 +1,64 @@
+#!/bin/sh
+
+start() {
+    echo "Starting antares..."
+    #Ethernet interface
+    ifconfig eth0 up
+    ifconfig eth0 192.168.9.6
+    
+    #SSH
+    #Check here if authorized_keys file exists
+    if [ ! -f /root/.ssh/authorized_keys ]; then
+        #Create .ssh directory
+        mkdir -p /root/.ssh
+        #Copy authorized_keys file
+        cp /etc/ssh/authorized_keys /root/.ssh/
+        #Set permissions
+        chmod 700 /root/.ssh
+        chmod 600 /root/.ssh/authorized_keys
+    fi  
+    /etc/init.d/sshd start  
+
+    #Switch to USB-A
+    echo 412 > /sys/class/gpio/export 
+    echo out > /sys/class/gpio/gpio412/direction 
+    echo 1 > /sys/class/gpio/gpio412/value
+
+    #Install the required modules for the USB modem and PPP
+    insmod /lib/modules/4.9.191/usbserial.ko
+    insmod /lib/modules/4.9.191/usb_wwan.ko
+    insmod /lib/modules/4.9.191/option.ko
+    insmod /lib/modules/4.9.191/slhc.ko
+    insmod /lib/modules/4.9.191/ppp_generic.ko
+    insmod /lib/modules/4.9.191/crc-ccitt.ko
+    insmod /lib/modules/4.9.191/ppp_async.ko
+
+    #Start Logging
+    #Check here if the log file exists 
+     if [ ! -f /root/log/messages ]; then
+        #Create log directory
+        mkdir -p /root/log
+        #Create the file
+        touch /root/log/messages
+    fi  
+    start-stop-daemon -b -S -x /sbin/syslogd -p /var/run/syslogd.pid -- -n -O /root/log/messages -s 256
+}
+
+stop() {
+    echo "Stopping antares..."
+    start-stop-daemon -K -q -p /var/run/syslogd.pid
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+esac
+
+exit $?

@@ -20,6 +20,7 @@
 ::sysinit:/bin/mount -o remount,rw /
 ::sysinit:/bin/mkdir -p /dev/pts
 ::sysinit:/bin/mkdir -p /dev/shm
+::sysinit:/bin/mkdir -p /var/run
 ::sysinit:/bin/mount -a
 #::sysinit:/bin/hostname -F /etc/hostname
 # now run any rc scripts
