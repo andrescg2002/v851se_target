@@ -42,6 +42,14 @@ start() {
         touch /root/log/messages
     fi  
     start-stop-daemon -b -S -x /sbin/syslogd -p /var/run/syslogd.pid -- -n -O /root/log/messages -s 256
+
+    #Start Antares application
+    if [ -f /usr/bin/antares ]; then
+        echo "Starting Antares application..."
+        /usr/bin/antares &
+    else
+        echo "Antares application not found!"
+    fi
 }
 
 stop() {
