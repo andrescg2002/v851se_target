@@ -35,13 +35,13 @@ start() {
 
     #Start Logging
     #Check here if the log file exists 
-     if [ ! -f /root/log/messages ]; then
+     if [ ! -f /data/log/messages ]; then
         #Create log directory
-        mkdir -p /root/log
+        mkdir -p /data/log
         #Create the file
-        touch /root/log/messages
+        touch /data/log/messages
     fi  
-    start-stop-daemon -b -S -x /sbin/syslogd -p /var/run/syslogd.pid -- -n -O /root/log/messages -s 256
+    start-stop-daemon -b -S -x /sbin/syslogd -p /var/run/syslogd.pid -- -n -O /data/log/messages -s 256
 
     #Start Antares application
     if [ -f /usr/bin/antares ]; then
