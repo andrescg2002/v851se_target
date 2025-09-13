@@ -1527,7 +1527,7 @@ CONFIG_BUSYBOX_CONFIG_FEATURE_FLOAT_SLEEP=y
 # CONFIG_BUSYBOX_CONFIG_SORT is not set
 # CONFIG_BUSYBOX_CONFIG_SPLIT is not set
 # CONFIG_BUSYBOX_CONFIG_STAT is not set
-# CONFIG_BUSYBOX_CONFIG_STTY is not set
+CONFIG_BUSYBOX_CONFIG_STTY=y
 # CONFIG_BUSYBOX_CONFIG_SUM is not set
 CONFIG_BUSYBOX_CONFIG_SYNC=y
 # CONFIG_BUSYBOX_CONFIG_FEATURE_SYNC_FANCY is not set
@@ -3124,7 +3124,7 @@ CONFIG_PACKAGE_kmod-w1-master-ds2482=y
 # CONFIG_PACKAGE_kmod-w1-slave-ds2433 is not set
 # CONFIG_PACKAGE_kmod-w1-slave-ds2760 is not set
 # CONFIG_PACKAGE_kmod-w1-slave-smem is not set
-# CONFIG_PACKAGE_kmod-w1-slave-therm is not set
+CONFIG_PACKAGE_kmod-w1-slave-therm=y
 
 #
 # WPAN 802.15.4 Support
@@ -3702,7 +3702,7 @@ CONFIG_PACKAGE_libmosquitto-ssl=y
 # CONFIG_PACKAGE_libmraa is not set
 # CONFIG_PACKAGE_libmysqlclient is not set
 # CONFIG_PACKAGE_libmysqlclient-r is not set
-# CONFIG_PACKAGE_libncurses is not set
+CONFIG_PACKAGE_libncurses=y
 # CONFIG_PACKAGE_libncursesw is not set
 # CONFIG_PACKAGE_libnetfilter-conntrack is not set
 # CONFIG_PACKAGE_libnetfilter-cthelper is not set
@@ -3808,7 +3808,7 @@ CONFIG_PACKAGE_libuuid=y
 # CONFIG_PACKAGE_tbb is not set
 # CONFIG_PACKAGE_tcmalloc is not set
 # CONFIG_PACKAGE_tcmalloc-minimal is not set
-# CONFIG_PACKAGE_terminfo is not set
+CONFIG_PACKAGE_terminfo=y
 # CONFIG_PACKAGE_tinyalsa-lib is not set
 # CONFIG_PACKAGE_tinyxml2 is not set
 # CONFIG_PACKAGE_tslib is not set
@@ -4559,7 +4559,7 @@ CONFIG_PACKAGE_dmesg=y
 # CONFIG_PACKAGE_gpioctl-sysfs is not set
 # CONFIG_PACKAGE_htop is not set
 # CONFIG_PACKAGE_hwclock is not set
-# CONFIG_PACKAGE_i2c-tools is not set
+CONFIG_PACKAGE_i2c-tools=y
 # CONFIG_PACKAGE_iconv is not set
 # CONFIG_PACKAGE_iozone3 is not set
 # CONFIG_PACKAGE_iwcap is not set
@@ -4578,7 +4578,7 @@ CONFIG_PACKAGE_logger=y
 # CONFIG_PACKAGE_logrotate is not set
 # CONFIG_PACKAGE_look is not set
 # CONFIG_PACKAGE_losetup is not set
-# CONFIG_PACKAGE_lrzsz is not set
+CONFIG_PACKAGE_lrzsz=y
 # CONFIG_PACKAGE_luajit is not set
 # CONFIG_PACKAGE_maccalc is not set
 # CONFIG_PACKAGE_mcookie is not set
