@@ -3,9 +3,9 @@
 start() {
     echo "Starting antares..."
     #Ethernet interface
-    ifconfig eth0 up
-    ifconfig eth0 192.168.9.6
-    
+    #ifconfig eth0 up
+    #ifconfig eth0 192.168.9.6
+
     #SSH
     #Check here if authorized_keys file exists
     if [ ! -f /root/.ssh/authorized_keys ]; then
@@ -16,13 +16,13 @@ start() {
         #Set permissions
         chmod 700 /root/.ssh
         chmod 600 /root/.ssh/authorized_keys
-    fi  
-    /etc/init.d/sshd start  
+    fi
+    /etc/init.d/sshd start
 
     #Switch to USB-A
-    echo 412 > /sys/class/gpio/export 
-    echo out > /sys/class/gpio/gpio412/direction 
-    echo 1 > /sys/class/gpio/gpio412/value
+    #echo 412 > /sys/class/gpio/export
+    #echo out > /sys/class/gpio/gpio412/direction
+    #echo 1 > /sys/class/gpio/gpio412/value
 
     #Install the required modules for the USB modem and PPP
     insmod /lib/modules/4.9.191/usbserial.ko
@@ -34,19 +34,75 @@ start() {
     insmod /lib/modules/4.9.191/ppp_async.ko
 
     #Start Logging
-    #Check here if the log file exists 
+    #Check here if the log file exists
      if [ ! -f /data/log/messages ]; then
         #Create log directory
         mkdir -p /data/log
         #Create the file
         touch /data/log/messages
-    fi  
+    fi
     start-stop-daemon -b -S -x /sbin/syslogd -p /var/run/syslogd.pid -- -n -O /data/log/messages -s 256
+
+    #Export and set GPIOs
+    #Modem Power control
+    echo 9 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio9/direction
+    echo 1 > /sys/class/gpio/gpio9/value
+
+    #Modem Power ON/OFF control
+    echo 132 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio132/direction
+
+    #Modem SIM disconnection control
+    echo 8 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio8/direction
+
+    #Modem USB Enumeration control
+    echo 131 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio131/direction
+
+    #Modem Reset control
+    echo 139 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio139/direction
+
+    #Battery charging status
+    echo 128 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio128/direction
+    echo 133 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio133/direction
+
+    #Power Rails monitoring
+    echo 130 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio130/direction
+    echo 136 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio136/direction
+
+    #Microcontroller attention pin
+    echo 137 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio137/direction
+
+    #LEDs YELLOW(161), GREEN(164), RED(166)
+    echo 161 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio161/direction
+    echo 164 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio164/direction
+    echo 166 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/gpio166/direction
+
+    #Accelerometer interrupt pins INT2(163), INT1(224)
+    echo 163 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio163/direction
+    echo 224 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio224/direction
+
+    #USB External device detection
+    echo 237 > /sys/class/gpio/export
+    echo in > /sys/class/gpio/gpio237/direction
 
     #Start Antares application
     if [ -f /usr/bin/antares ]; then
         echo "Starting Antares application..."
-        /usr/bin/antares &
+        #/usr/bin/antares &
     else
         echo "Antares application not found!"
     fi
