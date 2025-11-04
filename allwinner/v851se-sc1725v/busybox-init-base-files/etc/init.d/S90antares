@@ -2,24 +2,27 @@
 
 start() {
     echo "Starting antares..."
-    #Ethernet interface
+    #Ethernet interface (Only needed for SC1725V)
     #ifconfig eth0 up
     #ifconfig eth0 192.168.9.6
 
     #SSH
-    #Check here if authorized_keys file exists
-    if [ ! -f /root/.ssh/authorized_keys ]; then
+    #Check here for authorized_keys and id_rsa files exist
+    if [ ! -f /root/.ssh/authorized_keys ] || [ ! -f /root/.ssh/id_rsa ]
+    then
         #Create .ssh directory
         mkdir -p /root/.ssh
-        #Copy authorized_keys file
-        cp /etc/ssh/authorized_keys /root/.ssh/
+        #Copy files
+        cp /data/ssh/authorized_keys /root/.ssh/
+        cp /data/ssh/id_rsa /root/.ssh/
         #Set permissions
         chmod 700 /root/.ssh
         chmod 600 /root/.ssh/authorized_keys
+        chmod 600 /root/.ssh/id_rsa
     fi
     /etc/init.d/sshd start
 
-    #Switch to USB-A
+    #Switch to USB-A (Only needed for SC1725V)
     #echo 412 > /sys/class/gpio/export
     #echo out > /sys/class/gpio/gpio412/direction
     #echo 1 > /sys/class/gpio/gpio412/value
@@ -32,6 +35,21 @@ start() {
     insmod /lib/modules/4.9.191/ppp_generic.ko
     insmod /lib/modules/4.9.191/crc-ccitt.ko
     insmod /lib/modules/4.9.191/ppp_async.ko
+
+    #Install the required module for the accelerometer
+    # insmod /lib/modules/4.9.191/industrialio.ko
+    # insmod /lib/modules/4.9.191/kfifo_buf.ko
+    # insmod /lib/modules/4.9.191/industrialio-triggered-buffer.ko
+    # insmod /lib/modules/4.9.191/st_sensors.ko
+    # insmod /lib/modules/4.9.191/st_sensors_i2c.ko
+    # insmod /lib/modules/4.9.191/st_accel.ko
+    # insmod /lib/modules/4.9.191/st_accel_i2c.ko
+
+    #Install the required module for the one-wire interface
+    insmod /lib/modules/4.9.191/wire.ko
+    insmod /lib/modules/4.9.191/ds2482.ko
+    insmod /lib/modules/4.9.191/w1_therm.ko
+    echo 0 > /sys/bus/w1/devices/w1_bus_master1/w1_master_pullup
 
     #Start Logging
     #Check here if the log file exists
@@ -58,8 +76,8 @@ start() {
     echo out > /sys/class/gpio/gpio8/direction
 
     #Modem USB Enumeration control
-    echo 131 > /sys/class/gpio/export
-    echo out > /sys/class/gpio/gpio131/direction
+    #echo 131 > /sys/class/gpio/export
+    #echo out > /sys/class/gpio/gpio131/direction
 
     #Modem Reset control
     echo 139 > /sys/class/gpio/export
@@ -102,7 +120,7 @@ start() {
     #Start Antares application
     if [ -f /usr/bin/antares ]; then
         echo "Starting Antares application..."
-        #/usr/bin/antares &
+        /usr/bin/antares &
     else
         echo "Antares application not found!"
     fi
@@ -110,6 +128,8 @@ start() {
 
 stop() {
     echo "Stopping antares..."
+    #Stop Antares application
+    killall antares
     start-stop-daemon -K -q -p /var/run/syslogd.pid
 }
 
